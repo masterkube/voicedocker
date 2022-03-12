@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Axon Voice</title>
+    <meta name="description" content="A Voice Note App that allows you to take voice and/or text notes and play them back.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Bootstrap CDN CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.1/cerulean/bootstrap.min.css" rel="stylesheet" integrity="sha384-0Mou2qXGeXK7k/Ue/a1hspEVcEP2zCpoQZw8/MPeUgISww+VmDJcy2ri9tX0a6iy" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container-fluid align-center">
+        <img src="./assets/img/VOICE LOGO-01.png" style="height: 20%; width: 20%;">
+        <p id="parentdomains" style="font-size: large;" ></p>
+        <hr>
+        <h3 class="no-browser-support">Sorry, Your Browser Doesn't Support the Web Speech API. Try Opening This Demo In Google Chrome.</h3>
+        <div class="app">
+            <div class="column">
+                <div  class="column" onclick="load()">
+                    <div id="imgClickAndChange">
+                        <img alt="" src="./assets/img/20170626 animated USD Voice.gif"  style="height: 220px; width: 180px;" onclick="changeImage()"/>
+                    </div>
+                    <div id="imgClickAndChange2">
+                    </div>
+                        <div class="input-single">
+                        <!-- <p id="note-textarea"></p> -->
+                    </div>
+                    <!-- <p id="recording-instructions"></p> -->
+                </div>
+                
+                <div class="column">
+                    <!-- <h3>Data Collected</h3> -->
+                    <img src="./assets/img/Logo.png" style="height: 10%; width: 10%;">
+                    <p id="sltdomain"></p>
+                    <ul id="notes">
+                        <li>
+                            <!-- <p class="no-notes"></p> -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /row -->
+        </div>
+        <!-- /app -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
