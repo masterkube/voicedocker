@@ -271,7 +271,7 @@ function getinterdata(url,ii){
     te = url.split("/");
     limit = url.indexOf(te[8])-1;
     tourl= url.substring(0,limit); 
-    var proxy="http://rbacproxy.herokuapp.com/";
+    var proxy="https://rbacproxy.herokuapp.com/";
     var xmlhttp = new XMLHttpRequest();
     var result = "";
     xmlhttp.onreadystatechange = function() {
@@ -292,7 +292,7 @@ function getinterdata(url,ii){
 
 
 function getlvl1(toget){
-    var proxy="http://rbacproxy.herokuapp.com/";
+    var proxy="https://rbacproxy.herokuapp.com/";
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -328,7 +328,7 @@ function getlvl1(toget){
 }
 
 function getlvl2(toget,interm){
-    var proxy="http://rbacproxy.herokuapp.com/";
+    var proxy="https://rbacproxy.herokuapp.com/";
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -366,7 +366,7 @@ function getlvl2(toget,interm){
 }
 
 function getlvl4(url){
-    var proxy="http://rbacproxy.herokuapp.com/";
+    var proxy="https://rbacproxy.herokuapp.com/";
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -401,7 +401,7 @@ function getlvl4(url){
 
 
 function getlvl6(url){
-    var proxy="http://rbacproxy.herokuapp.com/";
+    var proxy="https://rbacproxy.herokuapp.com/";
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -442,7 +442,7 @@ function getlvl6(url){
 
 
 function getlvl5(toget,interm){
-    var proxy="http://rbacproxy.herokuapp.com/";
+    var proxy="https://rbacproxy.herokuapp.com/";
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
