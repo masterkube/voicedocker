@@ -13,6 +13,7 @@ var notesList = $('ul#notes');
 var placedomain = $("#sltdomain");
 
 var recogContent = '';
+var host = window.location.hostname;
 
 /*-----------------------------
       Voice Recognition 
@@ -322,7 +323,7 @@ function getlvl1(toget){
         }
       }
     }
-    xmlhttp.open("GET", proxy+"http://143.110.179.157:3000/Axon/MasterKube/search/masterkube?element="+toget,true);
+    xmlhttp.open("GET", proxy+"http://"+host+":3000/Axon/MasterKube/search/masterkube?element="+toget,true);
     xmlhttp.overrideMimeType('text/xml');
     xmlhttp.send();
 }
@@ -359,7 +360,7 @@ function getlvl2(toget,interm){
         }
       }
     }
-    xmlhttp.open("GET", proxy+"http://143.110.179.157:3000/Axon/MasterKube/search/masterkube/"+interm+"?element="+toget,true);
+    xmlhttp.open("GET", proxy+"http://"+host+":3000/Axon/MasterKube/search/masterkube/"+interm+"?element="+toget,true);
     xmlhttp.overrideMimeType('text/xml');
     xmlhttp.send();
     recogContent="";
@@ -473,7 +474,7 @@ function getlvl5(toget,interm){
         }
       }
     }
-    xmlhttp.open("GET", proxy+"http://143.110.179.157:3000/Axon/MasterKube/search/masterkube/"+interm+"?element="+toget,true);
+    xmlhttp.open("GET", proxy+"http://"+host+":3000/Axon/MasterKube/search/masterkube/"+interm+"?element="+toget,true);
     xmlhttp.overrideMimeType('text/xml');
     xmlhttp.send();
     recogContent="";
