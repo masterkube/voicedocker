@@ -167,6 +167,9 @@ function operation3(action_nome,urll){
             if(strsplit[1]=="one"){
                 ind=0;
             }
+            if(strsplit[1]=="to" || strsplit[1]=="too"){
+                index=1;
+            }
             else{
                 ind = Number(strsplit[1]);
                 ind= ind-1;
@@ -196,7 +199,7 @@ function operationexp(action_name){
             if(strsplit[1]=="one"){
                 index=0;
             }
-            if(strsplit[1]=="to"){
+            if(strsplit[1]=="to" || strsplit[1]=="too"){
                 index=1;
             }
             else{
@@ -224,6 +227,9 @@ function operationonly(action_name,toget){
                 strsplit= content.split(" ");
                 if(strsplit[1]=="one"){
                     index=0;
+                }
+                if(strsplit[1]=="to" || strsplit[1]=="too"){
+                    index=1;
                 }
                 else{
                     index = Number(strsplit[1]);
