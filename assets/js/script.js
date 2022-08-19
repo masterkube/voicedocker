@@ -164,15 +164,15 @@ function operation3(action_nome,urll){
         noteTextarea.text(content);
         if(content.toLowerCase().search("select")>=0){
             strsplit= content.split(" ");
-            if(strsplit[1]=="one"){
+            if(strsplit[1]=="one" || strsplit[1]=="1"){
                 ind=0;
             }
-            if(strsplit[1]=="to" || strsplit[1]=="too"){
-                index=1;
+            if(strsplit[1]=="to" || strsplit[1]=="too" || strsplit[1]=="2" || strsplit[1]=="tu"){
+                ind=1;
             }
             else{
                 ind = Number(strsplit[1]);
-                ind= ind-1;
+                ind = ind-1;
             }
             if (ind==undefined||action_nome[ind]==undefined || action_nome[ind]==NaN){
                 readOutLoud("invalid request try again");
@@ -196,10 +196,10 @@ function operationexp(action_name){
         noteTextarea.text(content);
         if(content.toLowerCase().search("explore")>=0){
             strsplit= content.split(" ");
-            if(strsplit[1]=="one"){
+            if(strsplit[1]=="one" || strsplit[1]=="1"){
                 index=0;
             }
-            if(strsplit[1]=="to" || strsplit[1]=="too"){
+            if(strsplit[1]=="to" || strsplit[1]=="too" || strsplit[1]=="2" || strsplit[1]=="tu"){
                 index=1;
             }
             else{
@@ -223,12 +223,12 @@ function operationonly(action_name,toget){
         setInterval ( function(){
             content=recogContent;
             noteTextarea.text(content);
-            if(content.toLowerCase().search("use")>=0){
+            if(content.toLowerCase().search("use")>=0 || content.toLowerCase().search("used")>=0){
                 strsplit= content.split(" ");
-                if(strsplit[1]=="one"){
+                if(strsplit[1]=="one" || strsplit[1]=="1"){
                     index=0;
                 }
-                if(strsplit[1]=="to" || strsplit[1]=="too"){
+                if(strsplit[1]=="to" || strsplit[1]=="too" || strsplit[1]=="2" || strsplit[1]=="tu"){
                     index=1;
                 }
                 else{
