@@ -13,7 +13,8 @@ var notesList = $('ul#notes');
 var placedomain = $("#sltdomain");
 
 var recogContent = '';
-var host = window.location.hostname;
+//var host = window.location.hostname;
+var host = "167.71.229.190"
 
 /*-----------------------------
       Voice Recognition 
@@ -164,7 +165,8 @@ function operation3(action_nome,urll){
         noteTextarea.text(content);
         if(content.toLowerCase().search("select")>=0){
             strsplit= content.split(" ");
-            if(strsplit[1]=="one" || strsplit[1]=="1"){
+            console.log("select...",strsplit[1])
+            if(strsplit[1]=="one" || strsplit[1]=="1" || strsplit[1].search("one")>0){
                 ind=0;
             }
             if(strsplit[1]=="to" || strsplit[1]=="too" || strsplit[1]=="2" || strsplit[1]=="tu"){
@@ -196,7 +198,8 @@ function operationexp(action_name){
         noteTextarea.text(content);
         if(content.toLowerCase().search("explore")>=0){
             strsplit= content.split(" ");
-            if(strsplit[1]=="one" || strsplit[1]=="1"){
+            console.log("explore...",strsplit[1])
+            if(strsplit[1]=="one" || strsplit[1]=="1" || strsplit[1].search("one")>0){
                 index=0;
             }
             if(strsplit[1]=="to" || strsplit[1]=="too" || strsplit[1]=="2" || strsplit[1]=="tu"){
@@ -225,7 +228,8 @@ function operationonly(action_name,toget){
             noteTextarea.text(content);
             if(content.toLowerCase().search("use")>=0 || content.toLowerCase().search("used")>=0){
                 strsplit= content.split(" ");
-                if(strsplit[1]=="one" || strsplit[1]=="1"){
+                console.log("use...",strsplit[1])
+                if(strsplit[1]=="one" || strsplit[1]=="1" || strsplit[1].search("one")>0){
                     index=0;
                 }
                 if(strsplit[1]=="to" || strsplit[1]=="too" || strsplit[1]=="2" || strsplit[1]=="tu"){
