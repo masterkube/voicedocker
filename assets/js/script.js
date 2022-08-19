@@ -13,8 +13,7 @@ var notesList = $('ul#notes');
 var placedomain = $("#sltdomain");
 
 var recogContent = '';
-//var host = window.location.hostname;
-var host = "167.71.229.190"
+var host = window.location.hostname;
 
 /*-----------------------------
       Voice Recognition 
