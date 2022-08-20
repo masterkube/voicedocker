@@ -14,6 +14,7 @@ var placedomain = $("#sltdomain");
 
 var recogContent = '';
 var host = window.location.hostname;
+//var host = "167.71.229.190"
 
 /*-----------------------------
       Voice Recognition 
@@ -165,10 +166,10 @@ function operation3(action_nome,urll){
         if(content.toLowerCase().search("select")>=0){
             strsplit= content.split(" ");
             console.log("select...",strsplit[1])
-            if(strsplit[1]=="one" || strsplit[1]=="1" || strsplit[1].search("one")>0){
+            if(strsplit[1].search("1")>=0|| strsplit[1].search("one")>=0){
                 ind=0;
             }
-            if(strsplit[1]=="to" || strsplit[1]=="too" || strsplit[1]=="2" || strsplit[1]=="tu"){
+            else if(strsplit[1]=="to" || strsplit[1]=="too" || strsplit[1]=="2" || strsplit[1]=="tu"){
                 ind=1;
             }
             else{
@@ -198,19 +199,19 @@ function operationexp(action_name){
         if(content.toLowerCase().search("explore")>=0){
             strsplit= content.split(" ");
             console.log("explore...",strsplit[1])
-            if(strsplit[1]=="one" || strsplit[1]=="1" || strsplit[1].search("one")>0){
-                index=0;
+            if(strsplit[1].search("1")>=0 || strsplit[1].search("one")>=0){
+                expindex=0;
             }
-            if(strsplit[1]=="to" || strsplit[1]=="too" || strsplit[1]=="2" || strsplit[1]=="tu"){
-                index=1;
+            else if(strsplit[1]=="to" || strsplit[1]=="too" || strsplit[1]=="2" || strsplit[1]=="tu"){
+                expindex=1;
             }
             else{
-                index = Number(strsplit[1]);
-                index= index-1;
+                expindex = Number(strsplit[1]);
+                expindex= index-1;
             }
             // readOutLoud("Fetching Details from "+action_name[index]+" in "+toget);
             recogContent="";
-            getlvl6(action_name[index]);
+            getlvl6(action_name[expindex]);
         }
         if(content.toLowerCase().search("home")>=0){
             readOutLoud("Returing back to home");
@@ -228,10 +229,10 @@ function operationonly(action_name,toget){
             if(content.toLowerCase().search("use")>=0 || content.toLowerCase().search("used")>=0){
                 strsplit= content.split(" ");
                 console.log("use...",strsplit[1])
-                if(strsplit[1]=="one" || strsplit[1]=="1" || strsplit[1].search("one")>0){
+                if(strsplit[1].search("1")>=0 || strsplit[1].search("one")>=0){
                     index=0;
                 }
-                if(strsplit[1]=="to" || strsplit[1]=="too" || strsplit[1]=="2" || strsplit[1]=="tu"){
+                else if(strsplit[1]=="to" || strsplit[1]=="too" || strsplit[1]=="2" || strsplit[1]=="tu"){
                     index=1;
                 }
                 else{
@@ -388,12 +389,18 @@ function getlvl4(url){
         readpointer=""
         for(j = 0; j < x.length; j++){
             if(x[j].children[1].innerHTML != "name"){
+                //normal
                 readpointer+= x[j].children[0].innerHTML+" "+x[j].children[2].innerHTML;
                 outread += (readpointer+"\n"); 
             }
             if(x[j].children[1].innerHTML == "name"){
+                //pointer
                 val+=1;
-                namearr.push(x[j].children[2].innerHTML);
+                try{
+                    namearr.push(x[j].children[2].innerHTML);
+                }catch{
+                    continue
+                }
                 readpointer+= val+" pointer "+x[j].children[0].innerHTML;
                 outread += (readpointer+"\n"); 
             }
